@@ -1,0 +1,12 @@
+server:
+  port: 18000
+eureka:
+  instance:
+    hostname: "localhost"
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: "http://localhost:18000/eureka/"
+  server:
+    enable-self-preservation: true
