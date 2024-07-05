@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    config:
+      #应用名称。对应git中文件名称的前半部分
+      name: Provider12001
+      #开发环境。对应git中文件名称的后半部分
+      profile: dev
+      #git分支
+      label: main
+      #config server的请求地址
+      uri: http://localhost:14000

@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    config:
+      #应用名称。对应git中文件名称的前半部分
+      name: Provider12000
+      #开发环境。对应git中文件名称的后半部分
+      profile: dev
+      #git分支
+      label: main
+      discovery:
+        enabled: true #开启服务发现
+        service-id: config-server #config server服务名
+#eureka配置
+eureka:
+  client:
+    service-url:
+      #将自己注册给Eureka Server集群
+      defaultZone: "http://localhost:18000/eureka/"
+  instance:
+    prefer-ip-address: true #使用ip地址注册
